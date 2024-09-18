@@ -1,11 +1,11 @@
-cow
-fs
-lock
-mmap
-net
-pgtbl
-riscv
-syscall
-thread
-traps
-util
+git checkout cow
+git checkout fs
+git checkout lock
+git checkout mmap
+git checkout net
+git checkout pgtbl
+git checkout riscv
+git checkout syscall
+git checkout thread
+git checkout traps
+git checkout util
