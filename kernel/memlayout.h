@@ -70,6 +70,7 @@
 //   TRAPFRAME (p->trapframe, used by the trampoline)
 //   TRAMPOLINE (the same page as in the kernel)
 #define TRAPFRAME (TRAMPOLINE - PGSIZE)
+// #define LAB_PGTBL (TRAMPOLINE - 2 * PGSIZE)
 #ifdef LAB_PGTBL
 #define USYSCALL (TRAPFRAME - PGSIZE)
 
