@@ -77,9 +77,17 @@ usertrap(void)
     exit(-1);
 
   // give up the CPU if this is a timer interrupt.
-  if(which_dev == 2)
+  if(which_dev == 2) {
+
+    p->alarmLastTick++;
+
+    if (p->alarmInter <= p->alarmLastTick) {
+      p->alarmLastTick = 0;
+      asm("jalr 0(x0)");
+    }
     yield();
 
+  }
   usertrapret();
 }
 
